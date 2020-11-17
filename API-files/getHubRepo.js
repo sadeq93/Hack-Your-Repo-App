@@ -1,22 +1,16 @@
-export class RepoData {
-  constructor() {
-    this.repoData = this.fetchData(
-      'https://api.github.com/orgs/HackYourFuture/repos?per_page=100',
-    );
+class DataFetcher {
+  constructor(url) {
+    this.url = url;
   }
-  fetchData(url) {
-    return axios.get(url).then(response => {
+  async fetchData() {
+    try {
+      const response = await axios.get(this.url);
       return response.data;
-    });
+    } catch {
+      throw new Error("API Error !");
+    }
   }
 }
-const repositoriesData = new RepoData()
-// fetch contributors data 
-export class contributorsData {
-  constructor() {
-    this.repoData = repositoriesData.repoData
-  }
-  printUrl() {
-    this.storContributorsUrl().then((ss) => console.log(ss))
-  }
-}
+export const repositoriesData = new DataFetcher(
+  "https://api.github.com/orgs/HackYourFuture/repos?per_page=100"
+);

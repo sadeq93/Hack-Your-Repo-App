@@ -65,22 +65,63 @@ body {
   flex-direction: column;
   padding: 1rem;
 }
-.dataBox {
-  padding: 7px;
-  display: flex;
-}
-#contsContainer{
+#contributorsSection {
   display: flex;
   flex-direction: column;
+  margin-top: 1rem;
+  background-color: #ffffff;
+  height: 28rem;
 }
+#contsContainer {
+  background: rgb(241, 241, 241);
+  height: 170px;
+}
+#buttonsContainer {
+  position: relative;
+  top: 13rem;
+  /* bottom: 1px; */
+  margin: 0 auto;
+}
+.contBox {
+  background-color: #5e1f99;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem;
+  color: #fff;
+  margin: 0.3rem 0;
+  /* height:3rem; */
+}
+.button {
+  width: 40px;
+  height: 40px;
+  margin: 0.3rem;
+  background-color: #ffffff;
+  border: solid 2px #5e1f99c9;
+  color: #5e1f99c9;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4em;
+}
+#contributorsMessage {
+  font-size: 3em;
+  color: rgba(0, 0, 0, 0.253);
+  display: flex;
+  justify-content: center;
+}
+
 #contributorsContainer {
   margin-top: 0.3rem;
+  background: #fff;
+  height: 15rem;
 }
 
 #contributorsContainer div {
   background: #fff;
   width: 100%;
-  height: 30px;
+  height: 2.5rem;
   display: flex;
   align-items: center;
 }
@@ -110,14 +151,19 @@ body {
   }
 
   #repoContainer {
-    max-width: 49%;
+    max-width: 80%;
     min-width: 49.5%;
     height: 200px;
+    margin: 0 auto;
   }
   #contributorsContainer {
-    max-width: 49%;
+    max-width: 80%;
     min-width: 49.5%;
-    margin-top: 0;
+    margin: 0 auto;
+  }
+  #contributorsSection {
+    max-width: 80%;
+    margin: 1rem auto;
   }
   /* ----Fonts---- */
   h1 {
@@ -139,6 +185,9 @@ body {
     max-width: 80%;
   }
   #headerContainer {
+    max-width: 80%;
+  }
+  #contributorsSection {
     max-width: 80%;
   }
   /* ----Fonts---- */
